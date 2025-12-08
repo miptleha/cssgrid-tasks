@@ -37,13 +37,9 @@ Viewport widths:
 **Goal:** Create a photo gallery grid with elements of different heights (masonry).
 
 **Requirements:**
-- Fixed width sidebar
-- Main area takes up all remaining space
-- Header and footer full width
-- Responsive behavior:
-    * Desktop/Tablet: Sidebar on left, main on right
-    * Mobile: Sidebar between header and main
-- Clean semantic structure
+- Elements should occupy different numbers of rows
+- Automatic filling without explicit positioning
+- Adaptive number of columns
 
 **Hint:** Use `grid-auto-flow: dense` and `grid-auto-rows`.
 
@@ -71,7 +67,10 @@ Viewport widths:
 - Fixed width sidebar
 - Main area takes up all remaining space
 - Header and footer full width
-- On mobile, sidebar moves to the bottom
+- Responsive behavior:
+    * Desktop/Tablet: Sidebar on left, main on right
+    * Mobile: Sidebar between header and main
+- Clean semantic structure
 
 **Hint:** Use named grid lines.
 
