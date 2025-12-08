@@ -1,0 +1,277 @@
+.dashboard {
+    display: grid;
+    gap: 1.5rem;
+    min-height: 80vh;
+}
+
+/* Mobile: single column */
+.dashboard {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    overflow: hidden;
+}
+
+.header-card {
+    background: linear-gradient(135deg, #2c3e50 0%, #1a2a6c 100%);
+    color: white;
+}
+
+.header-card h2 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.8rem;
+}
+
+.header-card p {
+    margin: 0;
+    opacity: 0.9;
+    font-size: 1rem;
+}
+
+.stat-card {
+    color: white;
+    padding: 1.5rem;
+}
+
+.stat-card h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.stat-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+    line-height: 1;
+}
+
+.stat-change {
+    opacity: 0.9;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Colors for stat cards */
+.stat-card:nth-child(2) {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.stat-card:nth-child(3) {
+    background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+}
+
+.stat-card:nth-child(4) {
+    background: linear-gradient(135deg, #FF9800 0%, #F57C00 100%);
+}
+
+.chart-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.chart-card h3 {
+    margin: 0 0 1rem 0;
+    color: #2c3e50;
+    font-size: 1.3rem;
+}
+
+.chart-placeholder {
+    height: 200px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-weight: bold;
+    font-size: 1.2rem;
+    flex: 1;
+}
+
+.chart-card.small .chart-placeholder {
+    height: 150px;
+    font-size: 1rem;
+}
+
+.user-card h3 {
+    margin: 0 0 1rem 0;
+    color: #2c3e50;
+    font-size: 1.3rem;
+}
+
+.user-list {
+    list-style: none;
+    margin: 1rem 0 0 0;
+    padding: 0;
+}
+
+.user-list li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95rem;
+}
+
+.user-list li:last-child {
+    border-bottom: none;
+}
+
+.user-role {
+    background: #f0f0f0;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.activity-card h3 {
+    margin: 0 0 1rem 0;
+    color: #2c3e50;
+    font-size: 1.3rem;
+}
+
+.activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.activity-item {
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #4CAF50;
+    font-size: 0.95rem;
+}
+
+/* Tablet: 2 columns */
+@media (min-width: 768px) {
+    .dashboard {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+    
+    .header-card {
+        grid-column: 1 / -1;
+    }
+    
+    .chart-card:not(.small) {
+        grid-column: 1 / -1;
+    }
+    
+    .user-card, .activity-card {
+        grid-column: span 1;
+    }
+}
+
+/* Desktop: 3 columns */
+@media (min-width: 1024px) {
+    .dashboard {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "header header header"
+            "stat1 stat2 stat3"
+            "chart chart chart"
+            "users users activity"
+            "traffic traffic traffic";
+    }
+    
+    .header-card {
+        grid-area: header;
+    }
+    
+    .stat-card:nth-child(2) {
+        grid-area: stat1;
+    }
+    
+    .stat-card:nth-child(3) {
+        grid-area: stat2;
+    }
+    
+    .stat-card:nth-child(4) {
+        grid-area: stat3;
+    }
+    
+    .chart-card:first-of-type {
+        grid-area: chart;
+    }
+    
+    .user-card {
+        grid-area: users;
+    }
+    
+    .activity-card {
+        grid-area: activity;
+    }
+    
+    .chart-card.small {
+        grid-area: traffic;
+    }
+    
+    .chart-card:first-of-type .chart-placeholder {
+        height: 250px;
+    }
+}
+
+/* Large desktop: 4 columns with better layout */
+@media (min-width: 1200px) {
+    .dashboard {
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas:
+            "header header header header header header header header header header header header"
+            "stat1 stat1 stat1 stat2 stat2 stat2 stat3 stat3 stat3 chart chart chart"
+            "users users users users users activity activity activity activity activity activity activity"
+            "traffic traffic traffic traffic traffic traffic traffic . . . . .";
+        gap: 2rem;
+    }
+    
+    .header-card {
+        padding: 2rem;
+    }
+    
+    .header-card h2 {
+        font-size: 2.2rem;
+    }
+    
+    .stat-card {
+        padding: 2rem;
+    }
+    
+    .stat-value {
+        font-size: 3rem;
+    }
+    
+    .chart-card:first-of-type .chart-placeholder {
+        height: 300px;
+    }
+    
+    .user-card, .activity-card {
+        padding: 1.8rem;
+    }
+    
+    .chart-card.small .chart-placeholder {
+        height: 180px;
+    }
+}
+
+/* Extra large screens */
+@media (min-width: 1400px) {
+    .dashboard {
+        grid-template-areas:
+            "header header header header header header header header header header header header"
+            "stat1 stat1 stat2 stat2 stat3 stat3 chart chart chart chart chart chart"
+            "users users users users activity activity activity activity traffic traffic traffic traffic";
+    }
+}

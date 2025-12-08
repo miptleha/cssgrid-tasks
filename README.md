@@ -56,7 +56,7 @@ Below are 5 practical assignments that demonstrate the power of CSS Grid in typi
 
 ## 📋 Assignment 3: Website Layout (header, sidebar, main, footer)
 
-**Goal:** Create a classic website layout with a fixed sidebar and flexible main area.
+**Goal:** Create a classic website layout with a sidebar and flexible main area.
 
 **Requirements:**
 - Fixed width sidebar
