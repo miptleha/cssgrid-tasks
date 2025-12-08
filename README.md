@@ -1,10 +1,14 @@
 # Practical Mini-Course: Typical Layouts with CSS Grid
 
-Below are 5 practical assignments that demonstrate the power of CSS Grid in typical layout tasks.
+Below are 5 practical assignments that demonstrate the power of CSS Grid in typical layout tasks.  
+Viewport widths:
+- Desktop: width >= 900px
+- Tablet: width >= 600px and width < 900px
+- Mobile: width < 600px
 
 ## 📋 Assignment 1: Responsive Product Card
 
-**Goal:** Create a responsive product card that changes element arrangement at different screen sizes.
+**Goal:** Create a responsive product card that changes element arrangement at different screen sizes.  
 
 **Requirements:**
 - Desktop: image on the left, information on the right
