@@ -4,168 +4,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task 5: Dashboard Layout</title>
-    <link rel="stylesheet" href="../common/common.css">
+    <link rel="stylesheet" href="../common2.css">
     <link rel="stylesheet" href="styles2.css">
 </head>
 <body>
-    <div class="container">
-        <h1 class="demo-title">Task 5: Dashboard Layout</h1>
-        <p class="demo-subtitle">
-            Create a complex dashboard with areas of different sizes that adapt to all screen sizes.
-        </p>
-
-        <div class="dashboard">
-            <!-- Header -->
-            <div class="card header-card">
-                <h2>📊 Dashboard Overview</h2>
-                <p>Welcome back! Here's your performance summary for Q4 2024</p>
+    <div class="dashboard">
+        <!-- Statistics 1: Revenue -->
+        <div class="stats-card revenue-stats">
+            <div class="stats-icon">💰</div>
+            <div class="stats-content">
+                <h3>Quarterly Revenue</h3>
+                <div class="stats-value">$124.8K</div>
+                <div class="stats-change">+18.4%</div>
             </div>
-            
-            <!-- Stat Cards -->
-            <div class="card stat-card">
-                <h3>Total Revenue</h3>
-                <p class="stat-value">$24,580</p>
-                <p class="stat-change">+12.5% from last month</p>
+        </div>
+        
+        <!-- Statistics 2: Users -->
+        <div class="stats-card user-stats">
+            <div class="stats-icon">👥</div>
+            <div class="stats-content">
+                <h3>Active Users</h3>
+                <div class="stats-value">3,842</div>
+                <div class="stats-change">+12.7%</div>
             </div>
-            
-            <div class="card stat-card">
-                <h3>New Users</h3>
-                <p class="stat-value">1,254</p>
-                <p class="stat-change">+8.2% from last month</p>
+        </div>
+        
+        <!-- Large Chart: Performance -->
+        <div class="chart-large">
+            <div class="chart-header">
+                <h3>📈 Performance Trends</h3>
+                <span class="chart-period">Last 30 days</span>
             </div>
-            
-            <div class="card stat-card">
-                <h3>Conversion Rate</h3>
-                <p class="stat-value">3.8%</p>
-                <p class="stat-change">+0.4% from last month</p>
+            <div class="chart-visual">
+                <div class="chart-bar bar-1"></div>
+                <div class="chart-bar bar-2"></div>
+                <div class="chart-bar bar-3"></div>
+                <div class="chart-bar bar-4"></div>
+                <div class="chart-bar bar-5"></div>
             </div>
-            
-            <!-- Main Chart -->
-            <div class="card chart-card">
-                <h3>📈 Monthly Performance Chart</h3>
-                <div class="chart-placeholder">Interactive Chart Area</div>
+            <div class="chart-labels">
+                <span>Mon</span>
+                <span>Tue</span>
+                <span>Wed</span>
+                <span>Thu</span>
+                <span>Fri</span>
             </div>
-            
-            <!-- User List -->
-            <div class="card user-card">
-                <h3>👥 Recent Active Users</h3>
-                <ul class="user-list">
-                    <li>Alex Johnson <span class="user-role">Administrator</span></li>
-                    <li>Maria Garcia <span class="user-role">Content Editor</span></li>
-                    <li>David Smith <span class="user-role">Viewer</span></li>
-                    <li>Sarah Wilson <span class="user-role">Editor</span></li>
-                    <li>Mike Brown <span class="user-role">Admin</span></li>
-                    <li>Emma Davis <span class="user-role">Viewer</span></li>
-                    <li>James Miller <span class="user-role">Editor</span></li>
-                </ul>
-            </div>
-            
-            <!-- Recent Activity -->
-            <div class="card activity-card">
-                <h3>🔄 Recent System Activity</h3>
-                <div class="activity-list">
-                    <div class="activity-item">New user registration completed</div>
-                    <div class="activity-item">Order #12345 successfully processed</div>
-                    <div class="activity-item">System update v2.1.0 installed</div>
-                    <div class="activity-item">Monthly analytics report generated</div>
-                    <div class="activity-item">Backup completed successfully</div>
+        </div>
+        
+        <!-- Recent Activity -->
+        <div class="recent-activity">
+            <h3>🔄 Recent Activity</h3>
+            <div class="activity-feed">
+                <div class="activity-item">
+                    <span class="activity-icon">✨</span>
+                    <span class="activity-text">New user signed up</span>
+                    <span class="activity-time">2 min ago</span>
+                </div>
+                <div class="activity-item">
+                    <span class="activity-icon">💳</span>
+                    <span class="activity-text">Payment processed</span>
+                    <span class="activity-time">15 min ago</span>
+                </div>
+                <div class="activity-item">
+                    <span class="activity-icon">📧</span>
+                    <span class="activity-text">Newsletter sent</span>
+                    <span class="activity-time">1 hour ago</span>
+                </div>
+                <div class="activity-item">
+                    <span class="activity-icon">🔄</span>
+                    <span class="activity-text">System updated</span>
+                    <span class="activity-time">2 hours ago</span>
                 </div>
             </div>
-            
-            <!-- Traffic Chart -->
-            <div class="card chart-card small">
-                <h3>📊 Traffic Sources</h3>
-                <div class="chart-placeholder">Traffic Distribution Chart</div>
+        </div>
+        
+        <!-- Medium Chart: Engagement -->
+        <div class="chart-medium">
+            <h3>📊 Engagement Rate</h3>
+            <div class="gauge-container">
+                <div class="gauge">
+                    <div class="gauge-fill"></div>
+                </div>
+                <div class="gauge-value">78%</div>
+            </div>
+            <div class="chart-note">Above industry average</div>
+        </div>
+        
+        <!-- User List -->
+        <div class="user-list">
+            <h3>👤 Top Contributors</h3>
+            <div class="contributors-list">
+                <div class="contributor">
+                    <span class="contributor-avatar">👨‍💼</span>
+                    <span class="contributor-name">Alex Morgan</span>
+                    <span class="contributor-score">⭐ 4.9</span>
+                </div>
+                <div class="contributor">
+                    <span class="contributor-avatar">👩‍💻</span>
+                    <span class="contributor-name">Sarah Chen</span>
+                    <span class="contributor-score">⭐ 4.8</span>
+                </div>
+                <div class="contributor">
+                    <span class="contributor-avatar">🧑‍🔬</span>
+                    <span class="contributor-name">David Kim</span>
+                    <span class="contributor-score">⭐ 4.7</span>
+                </div>
+                <div class="contributor">
+                    <span class="contributor-avatar">👩‍🎨</span>
+                    <span class="contributor-name">Maria Garcia</span>
+                    <span class="contributor-score">⭐ 4.6</span>
+                </div>
             </div>
         </div>
-        
-        <div class="layout-info">
-            <p style="color: white; margin-top: 2rem; text-align: center; font-size: 0.9rem;">
-                <strong>Current layout:</strong> 
-                <span id="layoutInfo">Mobile (1 column)</span> | 
-                Grid columns: <span id="gridColumns">1</span>
-            </p>
-        </div>
     </div>
-
-    <script src="../common/common.js"></script>
-    <script>
-        // Update layout info
-        function updateLayoutInfo() {
-            const width = window.innerWidth;
-            let layout = 'Desktop (4+ columns)';
-            let columns = '12';
-            
-            if (width < 768) {
-                layout = 'Mobile (1 column)';
-                columns = '1';
-            } else if (width < 1024) {
-                layout = 'Tablet (2 columns)';
-                columns = '2';
-            } else if (width < 1200) {
-                layout = 'Desktop (3 columns)';
-                columns = '3';
-            }
-            
-            document.getElementById('layoutInfo').textContent = layout;
-            document.getElementById('gridColumns').textContent = columns;
-        }
-        
-        // Initial update
-        updateLayoutInfo();
-        
-        // Update on resize
-        window.addEventListener('resize', updateLayoutInfo);
-        
-        // Make user list items clickable
-        document.querySelectorAll('.user-list li').forEach(item => {
-            item.addEventListener('click', function() {
-                const userName = this.textContent.split(' ')[0];
-                const userRole = this.querySelector('.user-role').textContent;
-                
-                // Visual feedback
-                this.style.background = '#f0f8ff';
-                this.style.transform = 'translateX(5px)';
-                
-                setTimeout(() => {
-                    this.style.background = '';
-                    this.style.transform = '';
-                }, 300);
-                
-                console.log(`Selected user: ${userName} (${userRole})`);
-            });
-        });
-        
-        // Make activity items clickable
-        document.querySelectorAll('.activity-item').forEach(item => {
-            item.addEventListener('click', function() {
-                // Toggle selected state
-                this.classList.toggle('selected');
-                
-                if (this.classList.contains('selected')) {
-                    this.style.background = '#e8f5e9';
-                    this.style.borderLeftColor = '#4CAF50';
-                } else {
-                    this.style.background = '#f8f9fa';
-                    this.style.borderLeftColor = '#4CAF50';
-                }
-            });
-        });
-        
-        // Add animation to stat cards on load
-        document.addEventListener('DOMContentLoaded', () => {
-            const statCards = document.querySelectorAll('.stat-card');
-            statCards.forEach((card, index) => {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(20px)';
-                
-                setTimeout(() => {
-                    card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-                    card.style.opacity = '1';
-                    card.style.transform = 'translateY(0)';
-                }, 100 * index);
-            });
-        });
-    </script>
 </body>
 </html>

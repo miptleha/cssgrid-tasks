@@ -1,15 +1,121 @@
 .navbar {
     display: grid;
-    gap: 1rem;
-    padding: 1rem;
+    gap: 15px;
+    padding: 15px;
     background: white;
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    align-items: center;
-    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-/* Mobile: burger menu layout */
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li {
+    padding: 10px 15px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.nav-menu li:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.nav-menu li:active {
+    transform: translateY(0);
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.btn-login {
+    background: #f0f0f0;
+    color: #333;
+}
+
+.btn-login:hover {
+    background: #e0e0e0;
+    transform: translateY(-2px);
+}
+
+.btn-signup {
+    background: #667eea;
+    color: white;
+}
+
+.btn-signup:hover {
+    background: #5a6fd8;
+    transform: translateY(-2px);
+}
+
+/* Button press effect */
+.btn:active,
+.btn.pressed {
+    transform: translateY(0);
+}
+
+.burger-menu {
+    font-size: 1.5rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 5px;
+    border-radius: 4px;
+    transition: background 0.2s ease;
+    position: relative;
+}
+
+.burger-menu:hover {
+    background: #f0f0f0;
+}
+
+/* Иконки бургера */
+.burger-icon {
+    display: block;
+}
+
+.close-icon {
+    display: none;
+}
+
+.menu-active .burger-icon {
+    display: none;
+}
+
+.menu-active .close-icon {
+    display: block;
+}
+
+/* ===== 1. MOBILE (< 768px) ===== */
+.burger-menu {
+    display: block;
+}
+
 .navbar {
     grid-template-columns: 1fr auto;
     grid-template-areas:
@@ -18,166 +124,84 @@
         "buttons buttons";
 }
 
-.logo {
-    grid-area: logo;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #2c3e50;
-    white-space: nowrap;
-}
-
 .nav-menu {
     grid-area: menu;
-    list-style: none;
-    display: none;
     flex-direction: column;
-    gap: 0.5rem;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-menu li {
-    padding: 0.8rem 1rem;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: 500;
-    color: #2c3e50;
-    background: #f8f9fa;
-    transition: all 0.3s ease;
-}
-
-.nav-menu li:hover {
-    background: #e9ecef;
-    transform: translateX(5px);
-}
-
-.nav-menu li.active {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
+    display: none;
 }
 
 .nav-buttons {
     grid-area: buttons;
-    display: none;
     flex-direction: column;
-    gap: 0.5rem;
+    display: none;
 }
 
-.btn-primary, .btn-secondary {
-    padding: 0.8rem 1.5rem;
-    border: none;
-    border-radius: 6px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.btn-primary {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-}
-
-.btn-secondary {
-    background: #f0f0f0;
-    color: #2c3e50;
-}
-
-.btn-primary:hover, .btn-secondary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.burger-menu {
-    grid-area: burger;
-    display: block;
-    font-size: 1.5rem;
-    cursor: pointer;
-    padding: 0.5rem;
-    border: none;
-    background: none;
-    color: #2c3e50;
-}
-
-/* Menu active state */
+/* Active state for mobile menu */
 .navbar.menu-active .nav-menu,
 .navbar.menu-active .nav-buttons {
     display: flex;
 }
 
-/* Tablet layout */
-@media (min-width: 600px) {
+/* ===== 2. TABLET (768px - 1023px) ===== */
+@media (min-width: 768px) {
     .navbar {
-        grid-template-columns: auto 1fr auto;
         grid-template-areas:
-            "logo menu buttons";
-    }
-    
-    .nav-menu {
-        display: flex !important;
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-    }
-    
-    .nav-menu li {
-        padding: 0.5rem 1rem;
-        background: none;
-    }
-    
-    .nav-buttons {
-        display: flex !important;
-        flex-direction: row;
-        gap: 0.5rem;
+            "logo buttons"
+            "menu menu";
+        grid-template-columns: auto auto;
+        justify-content: start;
+        align-items: center;
+        gap: 20px 30px;
     }
     
     .burger-menu {
         display: none;
     }
+    
+    .nav-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        grid-area: menu;
+        width: 100%;
+    }
+    
+    .nav-buttons {
+        display: flex;
+        flex-direction: row;
+        grid-area: buttons;
+        justify-content: start;
+    }
+    
+    /* Делаем Logo и кнопки рядом */
+    .logo {
+        margin-right: 10px;
+    }
 }
 
-/* Desktop layout */
-@media (min-width: 768px) {
+/* ===== 3. DESKTOP (≥ 1024px) ===== */
+@media (min-width: 1024px) {
     .navbar {
         grid-template-columns: auto 1fr auto;
-        padding: 1rem 1.5rem;
+        grid-template-areas: "logo menu buttons";
+        justify-content: normal;
+        align-items: center;
+        gap: 30px;
+    }
+    
+    .burger-menu {
+        display: none;
     }
     
     .nav-menu {
         justify-content: center;
-        gap: 1rem;
-        flex-wrap: nowrap;
     }
     
     .nav-buttons {
         justify-content: flex-end;
-        gap: 0.8rem;
     }
-}
-
-/* Content styling */
-.content {
-    background: white;
-    padding: 2rem;
-    border-radius: 12px;
-    margin-top: 2rem;
-}
-
-.features {
-    display: grid;
-    gap: 1.5rem;
-    margin-top: 2rem;
-}
-
-.feature {
-    background: #f8f9fa;
-    padding: 1.5rem;
-    border-radius: 8px;
-    border-left: 4px solid #667eea;
-}
-
-@media (min-width: 768px) {
-    .features {
-        grid-template-columns: repeat(3, 1fr);
+    
+    .logo {
+        margin-right: 0;
     }
 }
