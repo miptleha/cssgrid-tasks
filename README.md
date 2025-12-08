@@ -3,9 +3,9 @@
 Below are 5 practical assignments that demonstrate the power of CSS Grid in typical layout tasks.
 
 Viewport widths:
-- Desktop: width >= 900px
-- Tablet: width >= 600px and width < 900px
-- Mobile: width < 600px
+- Desktop: width >= 1024px
+- Tablet: width >= 764px and width < 1024px
+- Mobile: width < 764px
 
 ## 📋 Assignment 1: Responsive Product Card
 
