@@ -1,6 +1,7 @@
 # Practical Mini-Course: Typical Layouts with CSS Grid
 
-Below are 5 practical assignments that demonstrate the power of CSS Grid in typical layout tasks.  
+Below are 5 practical assignments that demonstrate the power of CSS Grid in typical layout tasks.
+
 Viewport widths:
 - Desktop: width >= 900px
 - Tablet: width >= 600px and width < 900px
