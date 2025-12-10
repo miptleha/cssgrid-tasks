@@ -2,6 +2,8 @@
 
 Below are 5 practical assignments that demonstrate the power of CSS Grid in typical layout tasks.
 
+Before continuing, it is recommended that you read the CSS Grid [documentation](https://web.dev/learn/css/grid).
+
 Viewport widths:
 - Desktop: width >= 1024px
 - Tablet: width >= 764px and width < 1024px
