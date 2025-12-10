@@ -1,4 +1,4 @@
-# Practical Mini-Course: Typical Layouts with CSS Grid
+# Practical Mini-Course: 5 Typical Layouts with CSS Grid
 
 Below are 5 practical assignments that demonstrate the power of CSS Grid in typical layout tasks.
 
