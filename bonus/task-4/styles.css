@@ -1,0 +1,30 @@
+.schedule {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 40px repeat(8, 60px);
+  gap: 1px;
+  border: 1px solid #ccc;
+  background-color: #eee;
+}
+
+.day {
+  background-color: #4CAF50;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.time {
+  background-color: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-style: italic;
+}
+
+.event {
+  background-color: white;
+  padding: 5px;
+}

@@ -2,7 +2,7 @@
 
 Below are 5 practical assignments that demonstrate the power of CSS Grid in typical layout tasks.
 
-Before continuing, it is recommended that you read the CSS Grid [documentation](https://web.dev/learn/css/grid).
+Before continuing, it is recommended that you read the CSS Grid [documentation](https://web.dev/learn/css/grid), [guide in russian](https://doka.guide/css/grid-guide/).
 
 Viewport widths:
 - Desktop: width >= 1024px
